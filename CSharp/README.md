@@ -1,7 +1,7 @@
 # CSharp
 - Content:
-    + [Collections](##Collections): The genetic and non-generic collections.
-    + [Boxing and unboxing](##Boxing)
+    + [Collections](#Collections): The genetic and non-generic collections.
+    + [Boxing and unboxing](#Boxing)
 ## Collections
 - It has two types: **generic** and **non-generic**.
 - As Generic, we have: **List**, **Dictionary**, **SortedList**, **Queue**, **Stack**, **Hashset**.

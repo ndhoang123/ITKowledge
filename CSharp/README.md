@@ -6,12 +6,12 @@
 - It has two types: **generic** and **non-generic**.
 - As Generic, we have: **List**, **Dictionary**, **SortedList**, **Queue**, **Stack**, **Hashset**.
 
-![Generics Collection](./Img/GenericsCollection.png)
+![Generics Collection](https://github.com/ndhoang123/ITKowledge/blob/main/CSharp/Img/GenericsCollection.PNG)
 
 - As non-generic, we have: **ArrayList**, **SortedList**, **Stack**, **Queue**, **Hashtable**, **BitArray**.
 - In the non-generic, they are stored as object. The compiler have to cast all the object to the specific type.
 
-![Non-Generics Collection](./Img/Non-GenericsCollection.png)
+![Non-Generics Collection](https://github.com/ndhoang123/ITKowledge/blob/main/CSharp/Img/Non-GenericsCollection.PNG)
 
 1. **ArrayList**:
 - In C#, the ArrayList is a non-generic collection of objects whose size increases dynamically. It is the same as **Array** except that its size increases dynamically.
@@ -53,7 +53,7 @@ object o = i // Boxing copies the value of i into object o
 - The result of this statement is creating an object reference o, on the stack, that references a value of the type int, on the heap. This value is a copy of the value-type value assigned to the variable i.
 
 <div style="text-align:center">
-    <img src="./Img/boxing-operation-i-o-variables.gif" />
+    <img src="https://github.com/ndhoang123/ITKowledge/blob/main/CSharp/Img/boxing-operation-i-o-variables.gif" />
 </div>
 
 - It is also possible to perform the boxing explicitly.
@@ -71,7 +71,7 @@ int j = (int)o;   // unboxing
 ```
 
 <div style="text-align:center">
-    <img src="./Img/unboxing-conversion-operation.gif" />
+    <img src="https://github.com/ndhoang123/ITKowledge/blob/main/CSharp/Img/unboxing-conversion-operation.gif" />
 </div>
 
 - For the unboxing of value types to `succeed` at **run time**, the item being unboxed **must be a reference** to an object that was **previously created by boxing** *an instance of that value type*. Attempting to unbox **null** causes a **NullReferenceException**. Attempting to unbox a **reference to an incompatible value type** causes an **InvalidCastException**.

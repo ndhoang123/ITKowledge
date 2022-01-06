@@ -2,6 +2,7 @@
 - Content:
     + [Collections](#Collections): The genetic and non-generic collections.
     + [Boxing and unboxing](#Boxing)
+    + [Mutable and Immutable](#Mutable)
 ## Collections
 - It has two types: **generic** and **non-generic**.
 - As Generic, we have: **List**, **Dictionary**, **SortedList**, **Queue**, **Stack**, **Hashset**.
@@ -77,3 +78,20 @@ int j = (int)o;   // unboxing
 - For the unboxing of value types to `succeed` at **run time**, the item being unboxed **must be a reference** to an object that was **previously created by boxing** *an instance of that value type*. Attempting to unbox **null** causes a **NullReferenceException**. Attempting to unbox a **reference to an incompatible value type** causes an **InvalidCastException**.
 
 Reference: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing
+
+## Mutable
+1. **Mutable**
+- Mutable means that it **can be changed**.
+- All the modified value in the object will work in the original memory provided by the system. And no new memory will be created during the operation.
+- It is recommended to use in case you want to alter some value in the object and also want to have good performance.
+- **StringBuilder** is a mutable.
+2. **Immutable**
+- In the opposite of Mutable, Immutable means that it **can not be changed**.
+- All the modified value in the immutable will be stored in the new object. The original object does not change, because it is unchangeable.
+- We are gonna use it in the case we dont consider the other changing easily your object.
+- All the unused memory, that was created in the past, will not free immediately, and wait for garbage collection to process. In the case the execution of string more than the GC execution, it causes the worst performance of software.
+- **String** is an immutable.
+3. **Null and Empty strings**
+- Note that you do not use the new operator to create a string object except when initializing the string with an array of chars.
+- **An empty string** is an instance of a `System.String` object that contains zero character.
+- **A null string** does not refer to an instance of a `System.String` object and `any attempt to call` a `method` on a null string *causes* a **NullReferenceException**. However, you can use null strings in concatenation and comparison operations with other strings.

@@ -2,6 +2,9 @@
 - Content:
     1. [Access Token](#access-token)
     2. [Bearer Token](#bearer-token)
+    3. [The difference between bearer token and JWT](#the-difference-between-bearer-token-and-jwt-token)
+    4. [OAuth2](#oauth2)
+    5. [Reference](#reference)
 
 ## Access Token
 
@@ -42,6 +45,34 @@
 
 - But, in the **downside**, the **bearer token** is that there is nothing preventing other apps from using a Bearer token if it can get access to it.
 
-- Reference: 
+## The difference between Bearer Token and JWT Token:
+- JWT is simply an encoding standard for tokens that contains a JSON payload that can be signed and encrypted.
+- JWT can be used for many things, among those are bearer tokens.
+
+## OAuth2
+### OAuth2 terms
+- **Resource owner**: The user.
+- **Client**: The application wants to retrieve the information from the server.
+- **Authorization server**: It verifies the identity of the user, and issues access tokens to the application.
+- **Resource server**: It contains the resources to be accessed, where client attempts to retrieve. In some cases, the authorization server and resource server stay at the same server, or seperate in the different place.
+- **Grants**: Methods to get access token from the authorization server are called **grants**. The same method used to request a token is also used by the resource server to validate a token.
+- **Scope**: It is used to restrict the client accessing in allowed area that the client was registed in the past.
+- **Token endpoint**: It is used by clients to get an access token from the authorization server.
+### Tokens
+- The two token types involved in OAuth 2 authentication are **Access Token** and **Refresh Token**.
+1. **Access token**:
+- The access token is used to for authentication and authorization to get access to the resources from the resource server.
+2. **Refresh Token**:
+- The refresh token normally is sent together with the access token.
+
+- The refresh token is used to get a new access token, when the old one expires. Instead of the normal grant type, the client provides the refresh token, and receives a new access token.
+
+### Grants types
+
+
+## Reference: 
 1. [Acess Token](https://auth0.com/docs/secure/tokens/access-tokens)
 2. [Bearer Token](https://www.oauth.com/oauth2-servers/differences-between-oauth-1-2/bearer-tokens/)
+3. [Difference between bearer token and JWT](https://stackoverflow.com/questions/40375508/whats-the-difference-between-jwts-and-bearer-token)
+4. [OAuth2 overview](https://www.soapui.org/docs/oauth2/oauth2-overview/)
+5. [OAuth2 in vietnamese version, well explaination and easy understanding](https://letjar.com/spring-boot-oauth2-openid/)

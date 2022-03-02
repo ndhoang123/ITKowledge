@@ -4,7 +4,8 @@
     2. [Bearer Token](#bearer-token)
     3. [The difference between bearer token and JWT](#the-difference-between-bearer-token-and-jwt-token)
     4. [OAuth2](#oauth2)
-    5. [Reference](#reference)
+    5. [OIDC](#oidc-openid-connect)
+    6. [Reference](#reference)
 
 ## Access Token
 
@@ -173,7 +174,7 @@
 |         |                                  |               |
 +---------+                                  +---------------+
 ```
-- The flow illustrated in Figure 6 includes the following steps:
+- The flow illustrated in the above includes the following steps:
 
    (A)  The client authenticates with the authorization server and requests an access token from the token endpoint.
 
@@ -200,7 +201,7 @@
 |         |    (w/ Optional Refresh Token)   |               |
 +---------+                                  +---------------+
 ```
-- The flow illustrated in Figure 5 includes the following steps:
+- The flow illustrated in the above includes the following steps:
 
    (A)  **The resource owner** ***provides*** **the client** with **its username and password**.
 
@@ -208,6 +209,10 @@
 
    (C)  The **authorization server** ***authenticates*** **the client and validates the resource owner credentials**, and **if valid**, **issues an access token**.
 
+## OIDC (OpenID Connect)
+- It is the extension of OAuth.
+- In OIDC, the client know who the resource owner is. With OAuth, the client doesn't know it.
+- The step is the same as the OAuth excepting for after getting the access token from athorization server, the client uses the access token to obtain `userinfo`.
 
 ## Reference: 
 1. [Acess Token](https://auth0.com/docs/secure/tokens/access-tokens)
@@ -215,3 +220,6 @@
 3. [Difference between bearer token and JWT](https://stackoverflow.com/questions/40375508/whats-the-difference-between-jwts-and-bearer-token)
 4. [OAuth2 overview](https://www.soapui.org/docs/oauth2/oauth2-overview/)
 5. [OAuth2 in vietnamese version, well explaination and easy understanding](https://letjar.com/spring-boot-oauth2-openid/)
+6. [Authorization code explaination](https://developer.okta.com/blog/2018/04/10/oauth-authorization-code-grant-type)
+7. [Password explaination](https://developer.okta.com/blog/2018/06/29/what-is-the-oauth2-password-grant)
+8. [Implicit explaination](https://developer.okta.com/blog/2018/05/24/what-is-the-oauth2-implicit-grant-type)

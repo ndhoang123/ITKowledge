@@ -11,5 +11,5 @@
 - [Computer Networking](): The OSI model, protocol in each of layer in the model: definition, how it works. (soon)
 - [DB](): Transaction, trigger(soon)
 - [OOP](): (soon)
-- [OAuth2](https://github.com/ndhoang123/ITKowledge/tree/main/OAuth2): The definition of OIDC, type grant. And, how it works for each of type grant.
+- [OAuth2](https://github.com/ndhoang123/ITKowledge/tree/main/OAuth2): The definition of OIDC, grant type, bearer token, access token. And, how it works for each of grant type.
 - [SOLID]() (soon)

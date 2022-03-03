@@ -10,6 +10,6 @@
 - [Rest](https://github.com/ndhoang123/ITKowledge/tree/main/API): The definition.
 - [Computer Networking](): The OSI model, protocol in each of layer in the model: definition, how it works. (soon)
 - [DB](): Transaction, trigger(soon)
-- [OOP](): (soon)
+- [OOP](https://github.com/ndhoang123/ITKowledge/tree/main/OOP): The features in OOP, access modifiers, the definition and the difference of some OOP-related features.
 - [OAuth2](https://github.com/ndhoang123/ITKowledge/tree/main/OAuth2): The definition of OIDC, grant type, bearer token, access token. And, how it works for each of grant type.
 - [SOLID]() (soon)

@@ -1,8 +1,12 @@
 # CSharp
 - Content:
-    + [Collections](#Collections): The genetic and non-generic collections.
-    + [Boxing and unboxing](#Boxing)
-    + [Mutable and Immutable](#Mutable)
+    + [Collections](#collections): The genetic and non-generic collections.
+    + [Boxing and unboxing](#boxing)
+    + [Mutable and Immutable](#mutable)
+    + [Weak Reference](#weak-reference)
+    + [Readonly and const](#readonly-and-const)
+    + [Reference](#good-reference)
+
 ## Collections
 - It has two types: **generic** and **non-generic**.
 - As Generic, we have: **List**, **Dictionary**, **SortedList**, **Queue**, **Stack**, **Hashset**.
@@ -95,3 +99,31 @@ Reference: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/type
 - Note that you do not use the new operator to create a string object except when initializing the string with an array of chars.
 - **An empty string** is an instance of a `System.String` object that contains zero character.
 - **A null string** does not refer to an instance of a `System.String` object and `any attempt to call` a `method` on a null string *causes* a **NullReferenceException**. However, you can use null strings in concatenation and comparison operations with other strings.
+
+## Weak Reference
+1. Strong reference:
+- The Garbage collector cannot collect an object in use by application while the application's code can reach the object. This application is called to have a strong reference to the object.
+- Because the object is a **strong reference type**, so **they can not be collected by GC**. Therefore, it may **cause the memory leak**, because the unused object is forced to remain in the memory, which requires you (just as above) to somehow determine when the image is no longer needed in memory and remove it from the cache, so that it becomes eligible for garbage collection 
+2. Weak reference:
+- A weak reference permits the garbage collector to collect the object while still allowing the application to access the object.
+- Another definition, A *weak reference*, simply put, is a reference that **isn't strong enough** to **force an object to remain in memory**. Weak references allow you to leverage the garbage collector's ability to determine reachability for you, so you don't have to do it yourself.
+- In C#, weak reference are distiguished by whether they track object resurrection or not. 
+    + In C# weak reference do not track resurrection, meaning a weak reference is not updated if an object is resurrected; these are called **short weak references**.
+    + Weak references that track resurrection, by using the **finalized** keyword, are called long **weak references**.
+
+## **Readonly and const**
+### **Const**
+- Once the constant field is assigned, the value of this field is not changed.
+
+=> The const is **constant** in the **compile-time**.
+### **Readonly**
+- The `readonly` keyword shows that you can assign the value only When the variable is **initialized in the declaration**, in **an instance constructor of the class** that **contains the instance field declaration**, or **in the static constructor of the class** that **contains the static field declaration**.
+
+=> The readonly is **constant** in the **run time**.
+#### **Ref readonly return example**
+- The `readonly` modifier on a `ref` indicates that the returned reference can't be modified. It uses the `readonly` modifier to indicate that callers can't modify the origin
+
+## Good reference:
+- [Weak reference by Java](https://web.archive.org/web/20100819115659/http://weblogs.java.net/blog/2006/05/04/understanding-weak-references) (**highly recommend to read!**).
+- [Object resurrection](https://en.wikipedia.org/wiki/Object_resurrection)
+- [Readonly](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/readonly)

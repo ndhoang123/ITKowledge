@@ -40,7 +40,32 @@
     | Non-derived class (different assembly)| ✔️️| ❌| ❌| ❌| ❌| ❌|
 
 ## Static
+### **Static class**
+- **A static class cannot be instantiated**, that means **the static class** **can not manually** **be created** to **the new instance** by users.
 
+- There is **only one instance**, that is created by system, **will stay in managed heap** until the AppDomain is unloaded.
+
+- All the member **in static class** **must** be **static**.
+
+- Static class is a sealed class so no class could derive from it.
+
+- Because there is no instance variable, you can access the members of a static class by using the `class name itself`.
+
+- A static constructor is only called one time.
+### **Static member**
+- A **non-static class** can ***contain*** the **static** fields, properties, methods, or events. The static member is callable on a class even when no instance of the class has been created.
+
+- **Static method and properties** ***cannot*** **access non-static fields** and events in their containing types.
+
+- **Static method can be overloaded** but **not overridden**, because they belong to the class, and not to any instance of the class.
+
+- Although a field cannot be declared as static const, a const field is essentially static in its behavior.
+
+- **C# does not support static local variables** (that is, variables that are declared in method scope).
+
+- You could not access static members via an class’ instance but via the class name.
+
+- **Static members** will be **created when the first access**.
 ## Reference
 - [OOP explained in depth](https://www.educative.io/blog/object-oriented-programming)
 - [Access modifiers in c#](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)

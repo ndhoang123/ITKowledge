@@ -5,6 +5,7 @@
     + [Mutable and Immutable](#mutable)
     + [Weak Reference](#weak-reference)
     + [Readonly and const](#readonly-and-const)
+    + [Reference and value type](#reference-and-value-type)
     + [Reference](#good-reference)
 
 ## Collections
@@ -122,6 +123,18 @@ Reference: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/type
 => The readonly is **constant** in the **run time**.
 #### **Ref readonly return example**
 - The `readonly` modifier on a `ref` indicates that the returned reference can't be modified. It uses the `readonly` modifier to indicate that callers can't modify the origin
+
+## Reference and value type
+- These are two kinds of types in C#: **value type** and **reference type**
+### **Value type**
+- It stores in the heap memory.
+- A variable of a value type contains an instance of the type.
+- Operations on a value-type variable affect only that instance of the value type, stored in the variable.
+- With value types, each variable has its own copy of the data, and it is not possible for operations on one variable to affect the other.
+### **Reference type**
+- It stores in stack memory. It has two components: **pointer** stored in the heap, and **stack** stored in the stack.
+- Variables of reference types store references to their data, while variables of value type directly contain their data.
+- With reference type, two variables can reference the same object, therefore, operations on one object directly affect the object referenced by the other object.
 
 ## Good reference:
 - [Weak reference by Java](https://web.archive.org/web/20100819115659/http://weblogs.java.net/blog/2006/05/04/understanding-weak-references) (**highly recommend to read!**).

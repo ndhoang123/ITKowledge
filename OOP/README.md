@@ -83,6 +83,8 @@
 
 - It can declare and intialize the field and non-abstract method in abstract class.
 
+=> You can think the abstract class as inheritance feature.
+
 ### **Interface**
 - An interface is a contract. Any class or struct that implements that contract must provide an implementation of the members defined in the interface.
 
@@ -94,7 +96,7 @@
 
 - An explicitly implemented member cannot be accessed through a class instance, but only through an instance of the interface.
 
-=> You can think interface as inheritance feature.
+=> You can think overloading as inheritance feature.
 
 ## Struct
 

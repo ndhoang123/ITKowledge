@@ -4,6 +4,8 @@
     + [Overriding and overloading](#overriding-and-overloading)
     + [Access modifiers](#access-modifiers)
     + [Static](#static)
+    + [Abstract class and interface](#abstract-class-interface)
+    + [Struct](#struct)
     + [Reference](#reference)
 
 ## The features in OOP
@@ -66,6 +68,37 @@
 - You could not access static members via an class’ instance but via the class name.
 
 - **Static members** will be **created when the first access**.
+
+## Abstract class, interface
+- They are types of abstraction.
+
+### **Abstract class**
+- Abstract classes look a lot like interfaces, but they have something more: You can define a behavior for them. It's more about a person saying, "*these classes should look like that, and they have that in common, so fill in the blanks!*".
+
+- It inherits by one class.
+
+- A non-abstract class derived from an abstract class **must include actual implementations of all inherited abstract methods and accessors**.
+
+- Use the `abstract` modifier in a method or property declaration to indicate that the method or property does not contain implementation.
+
+- It can declare and intialize the field and non-abstract method in abstract class.
+
+### **Interface**
+- An interface is a contract. Any class or struct that implements that contract must provide an implementation of the members defined in the interface.
+
+- The method in interface do not have the body, and the field cannot declare in the interface.
+
+- Any class or struct that implements that contract must provide an implementation of the members defined in the interface.
+
+- The interface can be implemented by many the derived classes.
+
+- An explicitly implemented member cannot be accessed through a class instance, but only through an instance of the interface.
+
+=> You can think interface as inheritance feature.
+
+## Struct
+
+
 ## Reference
 - [OOP explained in depth](https://www.educative.io/blog/object-oriented-programming)
 - [Access modifiers in c#](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)

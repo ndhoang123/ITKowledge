@@ -99,8 +99,15 @@
 => You can think overloading as inheritance feature.
 
 ## Struct
+- A **struct** type is a value type that is typically used to encapsulate small groups of related variables.
 
+- Structs can contain constructors, constants, fields, methods, properties, indexers, operators, events, and nested types, although if several such members are required, you should consider making your type a class instead.
+
+- Structs can implement an interface but they cannot inherit from another struct. For that reason, struct members cannot be declared as **protected**.
+
+- Unlike classes, struct is value type and it can be instantiated without using the **new** operator
 
 ## Reference
 - [OOP explained in depth](https://www.educative.io/blog/object-oriented-programming)
 - [Access modifiers in c#](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)
+- [What's the difference between struct and class in .NET?](https://stackoverflow.com/questions/13049/whats-the-difference-between-struct-and-class-in-net)

@@ -111,3 +111,4 @@
 - [OOP explained in depth](https://www.educative.io/blog/object-oriented-programming)
 - [Access modifiers in c#](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)
 - [What's the difference between struct and class in .NET?](https://stackoverflow.com/questions/13049/whats-the-difference-between-struct-and-class-in-net)
+- [Abstract class and interface explaination](https://voz.vn/t/phong-van-truot-em-con-thieu-nhung-gi.296033/page-2)
